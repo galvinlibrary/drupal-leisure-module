@@ -14,9 +14,8 @@ console.log("in file");
 
 
 $(init=function(){
-  console.log("in init function");
   $("#bookList").click(function () {
-    $("#bookList").fadeOut("slow");
+    $("#bookList").text("changed");
     console.log("in click function");
   });
 });
