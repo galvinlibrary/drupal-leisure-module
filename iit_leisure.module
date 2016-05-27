@@ -15,7 +15,7 @@ function iit_leisure_block_info() {
 
 function iit_leisure_block_view($delta = '') {
   $incluldeOpenMsg=1;
-  $msg = "<p><a href=\"#\" id=\"bookList\">booklist</a></p>";
+  $msg = "<p><a href=\"#\" id=\"bookListTest\">booklist</a></p>";
   $block['subject'] = t("Leisure Books");
   $block['content'] = $msg;
   return $block;
