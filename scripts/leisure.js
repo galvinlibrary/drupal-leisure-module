@@ -15,20 +15,15 @@ console.log("in file");
 
 $(init=function(){
   $("#bookList").click(function () {
-    $("#bookList").text("changed");
+    $("#bookList").text("functions changed");
     console.log("in click function");
   });
 });
   
-//  (function init () {
-//  // Variables defined in here will not affect the global scope.
-//    console.log("new init");
-//// The extra set of parenthesis here says run the function we just defined.
-//}());
 
 
 // don't add duplicate numbers to the array
-function checkIfInArray(arr, item){
+$(checkIfInArray=function(arr, item){
   var flag = false;
   for (var i = 0; i < arr.length; i++){
     if (arr[i]==item){
@@ -37,9 +32,9 @@ function checkIfInArray(arr, item){
     }
   }
   return flag;
-}
+});
 
-function generateRandomNumbers(howMany, numBooks){
+$(generateRandomNumbers=function(howMany, numBooks){
     var debug=false;
           if (debug) numBooks = 5; // force more duplicates
     var numArr= new Array; //make sure to try with just 1
@@ -57,9 +52,9 @@ function generateRandomNumbers(howMany, numBooks){
     }
     if (debug) alert(JSON.stringify(numArr));
     return numArr;
-}
+});
 
-function findDesc(idToFind){
+$(findDesc=function(idToFind){
   for (var i in descriptions){
     if (descriptions[i].id===idToFind){
       return descriptions[i].summary;
@@ -68,18 +63,18 @@ function findDesc(idToFind){
       continue;
     }
   }
-}       
+});       
 
   // Use event delegation    
-function changeDesc(e) {
+$(changeDesc=function(e) {
   console.log( e.target.id + " clicked" );
   var thisDesc;
   thisDesc=findDesc(e.target.id);
   jQuery('#text'+e.target.id).html(thisDesc);
-}
+});
 
 
-function loadRandomBooks(){
+$(loadRandomBooks=function(){
     var truncLen = 150;
     var bookSummaryTxt;
     descriptions = [];
@@ -137,6 +132,7 @@ function loadRandomBooks(){
       
     });// end getJSON
 
-} // end loadRandomBooks
+});
+// end loadRandomBooks
 init();
 }(jQuery));
