@@ -1,0 +1,8 @@
+name = Display Leisure Books
+description = Display random number of leisure books from JSON file. 
+package = Illinois Institute of Technology
+core = 7.x
+version = VERSION
+files[] = iit_leisure.module
+scripts[] = scripts/leisure.js
+

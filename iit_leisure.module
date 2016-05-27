@@ -1,0 +1,25 @@
+<?php
+  $GLOBALS['conf']['cache'] = FALSE;
+/**
+ * Implements hook_block_info.
+ */
+function iit_leisure_block_info() {
+  $blocks['hours'] = array(
+    'info' => t('IIT Leisure Books'),
+    'cache' => DRUPAL_NO_CACHE
+  );
+  return $blocks;
+}
+
+
+
+function iit_leisure_block_view($delta = '') {
+  $incluldeOpenMsg=1;
+  $msg = "<p><a href=\"#\" id=\"bookList\">booklist</a></p>";
+  $block['subject'] = t("Leisure Books");
+  $block['content'] = $msg;
+  return $block;
+}
+
+// http://www.wdtutorials.com/drupal-7/drupal-7-how-to-create-module-part-1#.VV47xvlVhBc
+// https://ezproxy.gl.iit.edu/login?url=http://dx.doi.org/10.1007/978-1-4302-2839-4
