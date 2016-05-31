@@ -15,19 +15,22 @@ console.log("in file");
 
 $(init=function(){
   console.log("in init function");
- $('#bookList tbody').empty();
-  $('#headingLine').html('Here are '+ howMany + ' random books'); 
-  
+ $('#bookList').empty();
+  $('#bookList').html('<h3>Here are '+ howMany + ' random books:</h3>'); 
+  appendText("more text");
   testWrite();
 });
   
 function testWrite(){
-  console.log("in write function");
   $('#bookListTest').text('text changed in function');
   $('#bookListTest').click(function(){
       console.log("item clicked");
      $("#bookListTest").text("text changed on click");
    });
+}
+
+function appendText($msg){
+  $('#bookList').append($msg);
 }
 
 
